@@ -25,10 +25,12 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
   <body>
     <div class="container">
 
-
-  <h1>  Booking #<?= $row['tid'] ?> </h1>
-    <table class="table">
+  <br><br>
+  
         <?php
+        if($row!=false){
+         echo(" <h1>  Booking #".$row['tid']." </h1>");
+           echo(" <table class='table'>");
         echo "<tr><th>Number of seats</th>";
         echo("<td>".$row['seats']."</td>");
         echo "<tr><th>Type of seats</th>";
@@ -57,13 +59,17 @@ $row=$stmt->fetch(PDO::FETCH_ASSOC);
             <th scope='row'><h3>Your unique pin is:</h3></th>
 
             <td><h3> ".$row['uniqueid']." </h3></td>
-          </tr>")
+          </tr>");
+      }
 
+      else{
+        echo("<p>You are not authorized to view this transaction. If you think this is a mistake, please contact comedyfestival2020@gmail.com");
+      }
 
 
 
          ?>
-    </table>
+    </table><br>
       <a href="index.php">Back to Home</a><br>
 </div>
 
