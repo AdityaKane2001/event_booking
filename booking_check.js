@@ -123,8 +123,6 @@ if (seats==0 || seats=="" || seats>9){
 }
 
 
-
-
 function submitfunction(){
   var objseat=document.getElementById('numberofseats');
   var seats=objseat.value;
@@ -237,6 +235,7 @@ if (objfood.checked==true){
   {
 
     alert("Enter valid details");
+    return false;
   }
   else{
 
@@ -273,11 +272,6 @@ if (objfood.checked==true){
     sessionStorage.setItem("usercost",cost);
     sessionStorage.setItem("userdaysstr",daysstr);
     sessionStorage.setItem("useremail",email_id);
-
-
-
-
-    alert("Form submitted successfully");
     return true;
 
 

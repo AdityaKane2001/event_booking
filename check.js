@@ -78,10 +78,9 @@ function submitForm(id) {
 
     if(cflagCvv==1 || cflagNumber==1 || cflagName==1){
 		alert("Please enter valid details");
-    ('hi');
+
     return false;
 		}else{
-		alert("OK");
     return true;
 	}
 	}else if(id=='debit'){
