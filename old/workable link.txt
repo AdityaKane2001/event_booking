@@ -1,0 +1,6 @@
+https://agile-lowlands-04053.herokuapp.com/
+
+for database acces: run on cmd
+
+PATH=%PATH%;C:\Program Files\PostgreSQL\12\bin
+heroku pg:psql postgresql-dimensional-32126 --app agile-lowlands-04053
