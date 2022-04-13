@@ -53,7 +53,7 @@ $row=$stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php
 
         require 'vendor/autoload.php';
-
+        if ($row!=false){
         $info="Name:".$row[0]['name']."\n"."UniqueId:".$_SESSION['uniqueid'];
 
         // This will output the barcode as HTML output to display in the browser
@@ -62,7 +62,7 @@ $row=$stmt->fetchAll(PDO::FETCH_ASSOC);
         echo("<br><br>");
 
         echo('<h3>Scan this barcode at the event</h3>');
-
+        }
 
          ?>
     </div>
